@@ -7,6 +7,7 @@ RAW_DATA_DIRS = [
 ]
 OUTPUT_PATH = Path("data/processed/deliveries.csv")
 BALLS_PER_OVER = 6
+MAX_REALISTIC_RUN_RATE = 36
 
 
 def parse_info_file(info_path):
@@ -58,11 +59,16 @@ def process_match(match_id, ball_by_ball_path, info):
         is_legal = pd.isna(row["wides"]) and pd.isna(row["noballs"])
         if(is_legal):
             ball += 1
-            balls_remaining =  balls_remaining - 1
+            if balls_remaining>0:
+                balls_remaining = balls_remaining - 1
+            else:
+                balls_remaining=0
         if not pd.isna(row["wicket_type"]):
-            wickets_remaining = wickets_remaining - 1
+            if wickets_remaining>0:
+                wickets_remaining = wickets_remaining - 1
         runs_scored_so_far += row["runs_off_bat"] + row["extras"]
         runs_needed = runs_needed - (row["runs_off_bat"] + row["extras"])
+
         if ball>0:
             current_run_rate = current_run_rate = (runs_scored_so_far) / ball * BALLS_PER_OVER
         else:
@@ -70,6 +76,8 @@ def process_match(match_id, ball_by_ball_path, info):
         
         if balls_remaining>0:
             required_run_rate = (runs_needed) / balls_remaining * BALLS_PER_OVER
+            if required_run_rate > MAX_REALISTIC_RUN_RATE:
+                required_run_rate = MAX_REALISTIC_RUN_RATE
         else:
             required_run_rate=0
 

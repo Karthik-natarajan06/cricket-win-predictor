@@ -1,0 +1,7 @@
+version,2.3.0
+info,team,TeamA
+info,team,TeamB
+info,overs,20
+info,match_type,T20
+info,target_runs,2,100
+info,winner,TeamA

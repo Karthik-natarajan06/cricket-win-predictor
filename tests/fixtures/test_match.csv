@@ -1,0 +1,7 @@
+match_id,season,start_date,venue,innings,ball,actual_delivery,batting_team,bowling_team,striker,non_striker,bowler,runs_off_bat,extras,wides,noballs,byes,legbyes,penalty,non_boundary,wicket_type,player_dismissed,other_wicket_type,other_player_dismissed,fielder_1,fielder_2,fielder_3
+9999,2024,2024-01-01,Test Ground,2,0.1,0.1,TeamA,TeamB,P1,P2,B1,4,0,,,,,,,,,,,,,
+9999,2024,2024-01-01,Test Ground,2,0.2,0.2,TeamA,TeamB,P1,P2,B1,0,1,1,,,,,,,,,,,,
+9999,2024,2024-01-01,Test Ground,2,0.3,0.3,TeamA,TeamB,P1,P2,B1,1,0,,,,,,,,,,,,,
+9999,2024,2024-01-01,Test Ground,2,0.4,0.4,TeamA,TeamB,P1,P2,B1,0,0,,,,,,,caught,P1,,,F1,,
+9999,2024,2024-01-01,Test Ground,2,0.5,0.5,TeamA,TeamB,P3,P2,B1,2,0,,,,,,,,,,,,,
+9999,2024,2024-01-01,Test Ground,2,0.6,0.6,TeamA,TeamB,P3,P2,B1,0,0,,,,,,,,,,,,,

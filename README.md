@@ -34,7 +34,8 @@ The final model is a random forest (`max_depth=10, min_samples_leaf=50`), achiev
 - Data source: [Cricsheet](https://cricsheet.org/) ball-by-ball match data
 
 ## Demo
-![Cricket Win Probability Predictor demo](Screenshots/demo.png)
+![Cricket Win Probability Predictor demo ODI](Screenshots/demo_1.png)
+![Cricket Win Probability Predictor demo T20](Screenshots/demo_2.png)
 
 ## Installation
 ```bash

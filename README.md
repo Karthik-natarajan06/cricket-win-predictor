@@ -35,7 +35,7 @@ The final model is a random forest (`max_depth=10, min_samples_leaf=50`), achiev
 
 ## Demo
 ![Cricket Win Probability Predictor demo ODI](Screenshots/demo_ODI.png)
-![Cricket Win Probability Predictor demo T20](Screenshots/Demo_2.png)
+![Cricket Win Probability Predictor demo T20](Screenshots/demo_T20.png)
 
 ## Installation
 ```bash
